@@ -1,5 +1,3 @@
-# Auditorias-forenses
-
 # PROYECTO FINAL: AUDITORÍA DE DATOS Y PENSAMIENTO CRÍTICO FRENTE AL FANATISMO Y SESGOS COGNITIVOS
 
 **Autor:** Steven (Tecnólogo en Análisis y Desarrollo de Software - ADSO SENA | Analítica de Datos UNAD)  
