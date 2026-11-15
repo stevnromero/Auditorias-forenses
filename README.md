@@ -88,3 +88,6 @@ Todo sistema informático necesita un *firewall* para bloquear tráfico malicios
 1. El fanatismo y las posturas "anti" operan como algoritmos defectuosos programados para confirmar un prejuicio previo, ignorando cualquier variable externa que los contradiga.
 2. La formación en **ADSO y Analítica de Datos** entrena la mente para auditar la realidad con frialdad, ética y precisión, convirtiendo al estudiante en un filtro efectivo contra la desinformación.
 3. La verdadera victoria intelectual de un analista no consiste en convencer al cínico, sino en **comprobar los hechos con evidencia irrefutable y retirarse a tiempo para proteger su tranquilidad**.
+
+<img width="1408" height="768" alt="image" src="https://github.com/user-attachments/assets/843e8da6-85d1-4322-a12b-d7b4f61972d0" />
+
