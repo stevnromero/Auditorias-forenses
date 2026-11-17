@@ -64,24 +64,26 @@ En el desarrollo de software (ADSO), ningún sistema procesa datos sin validarlo
 
 ## 5. Caso de Estudio Exploratorio
 
-> **Consideración ética:** Para respetar la privacidad y evitar conflictos personales, se omiten nombres reales y datos identificables.
+> **Consideración ética:** Para respetar la privacidad y evitar conflictos personales, se omiten nombres reales y datos identificables. Se analizan las intervenciones registradas entre el **Analista** (autor del proyecto) y el **Interlocutor A**.
 
 ### 5.1. Matriz de Verificación (Debate Deportivo y Jurídico)
 
 | ID | Tema Auditado | Afirmación Examinada (Input) | Verificación del Analista (Query) | Fuente Oficial de Contraste | Resultado |
 | :--- | :--- | :--- | :--- | :--- | :--- |
-| **AUD-001** | **Tipicidad penal** | Se afirma que existe delito de cohecho y compra comprobada de árbitros. | La Audiencia de Barcelona dejó sin efecto la imputación por cohecho al concluir que Negreira no era funcionario público. La investigación sigue por otros delitos, pero no existe sentencia firme de compra arbitral. | CGPJ (24 de mayo de 2024) – Nota oficial Audiencia de Barcelona. | **Falso / Impreciso** |
-| **AUD-002** | **Cronología histórica** | Se confunden fechas de mundiales pasados y se menciona una final perdida en el Mundial 2026. | Se revisan las fechas y resultados oficiales de las copas del mundo disputadas hasta noviembre de 2026. | Registros Históricos Oficiales FIFA (2026). | **Error de Datos** |
-| **AUD-003** | **Reglamento técnico** | Se niegan faltas visibles en video y se omiten acontecimientos de partidos de ida. | Se revisa la eliminatoria completa bajo el reglamento vigente y se reconocen también jugadas puntuales favorables. | IFAB – *Laws of the Game 2026/27* (Reglas 5, 11 y 12). | **Sesgo de Selección** |
-| **AUD-004** | **Gestión institucional** | Se mezclan trámites administrativos de inscripción con presuntos amaños arbitrales. | Se diferencia la gestión administrativa y contable del rendimiento deportivo en cancha. | Ley 39/2022, de 30 de diciembre, del Deporte (BOE). | **Cambio de Tema** |
+| **AUD-001** | **Tipicidad penal** | Se afirma que existe delito de cohecho y compra comprobada de árbitros. | La Audiencia de Barcelona dejó sin efecto la imputación por cohecho al concluir que Negreira no era funcionario público. La investigación sigue por otros delitos, pero no existe sentencia firme ni transferencias comprobadas a árbitros. | CGPJ (24 de mayo de 2024) – Nota oficial Audiencia de Barcelona. | **Falso / Impreciso** |
+| **AUD-002** | **Cronología histórica** | Se confunde el Mundial 1982 con 1986, se afirman 6 penales en Qatar 2022 y se cita una final perdida en el Mundial 2026. | Se revisan las fechas y estadísticas oficiales: el partido ante Inglaterra ocurrió en México 1986, en Qatar 2022 fueron 5 penales y la final del Mundial 2026 la ganó España. | Registros Históricos Oficiales FIFA (2026). | **Error de Datos** |
+| **AUD-003** | **Reglamento técnico** | Se niegan infracciones visibles en video (planchazo y simulación) y se omiten acontecimientos de partidos de ida. | Se revisan las eliminatorias completas bajo el reglamento vigente (expulsiones omitidas, ley de la ventaja) y se admiten también jugadas puntuales favorables al equipo propio. | IFAB – *Laws of the Game 2026/27* (Reglas 5, 11 y 12). | **Sesgo de Selección** |
+| **AUD-004** | **Gestión institucional** | Se mezclan trámites administrativos de inscripción de jugadores con presuntos amaños arbitrales. | Se diferencia la gestión administrativa y los plazos de prescripción deportiva del rendimiento en cancha. | Ley 39/2022, de 30 de diciembre, del Deporte (BOE). | **Cambio de Tema** |
 
 ### 5.2. Registro de Errores Propios del Analista
-*Para mantener la objetividad, el autor registra aquí sus propias fallas detectadas durante la revisión:*
+
+*Para mantener la objetividad, el autor registra aquí sus propias fallas detectadas durante la revisión de los registros:*
 
 | ID | Afirmación o Conducta Propia | Qué estuvo mal | Corrección Aplicada |
 | :--- | :--- | :--- | :--- |
-| **AUT-001** | `[Escribir aquí un dato citado de memoria sin verificar primero]` | `[Falta de fuente inmediata]` | `[Se buscó el documento oficial y se aclaró el dato]` |
-| **AUT-002** | `[Escribir aquí una respuesta con tono algo irónico]` | `[Reactividad emocional puntual]` | `[Se retomó el tono neutral centrado en los hechos]` |
+| **AUT-001** | Uso de adjetivos descalificativos en el intercambio (*"cínico"*, *"incrédulo y abominable"*, *"ardido"*). | Incumplimiento de la regla de control emocional y ataque *Ad Hominem* leve bajo provocación. | Se reconoció la reactividad, se retomó el tono amistoso y se cerró la conversación con respeto. |
+| **AUT-002** | Afirmar porcentajes exactos de justicia arbitral (*"perjudicados al 80%"*, *"beneficiados el 85%"*). | Presentar apreciaciones o percepciones personales como si fueran métricas estadísticas oficiales. | Se aclaró en el análisis que son estimaciones subjetivas sobre el desarrollo del partido, no datos oficiales. |
+| **AUT-003** | Proponer una apuesta monetaria (*"¿cuánto quieres apostar?"*) para resolver la discusión sobre una sentencia futura. | Desviación del método científico; una apuesta no valida ni refuta un hecho jurídico. | Se descartó la apuesta y se aplicó el protocolo de cierre ordenado (*graceful shutdown*). |
 
 ---
 
@@ -96,16 +98,15 @@ Para medir la calidad de las intervenciones se utiliza una escala simple donde *
 | **Coherencia Lógica** | Cambia de tema constantemente o se contradice. | Mantiene el tema con algunos desvíos. | Mantiene el hilo del debate sin contradicciones. |
 | **Control Emocional** | Usa insultos, burlas o ataques personales. | Tono variable con momentos de molestia. | Mantiene un trato respetuoso en todo momento. |
 
-### Tabla de Resultados (Para revisión de un tercero)
-*Lo ideal es que un compañero o docente asigne estas notas revisando la conversación:*
+### 6.1. Tabla de Resultados (Auditoría Aplicada)
 
-| Criterio | Analista | Interlocutor A | Observaciones |
+| Criterio | Analista | Interlocutor A | Observaciones y Evidencia |
 | :--- | :---: | :---: | :--- |
-| Rigor Fáctico | `[ ]/10` | `[ ]/10` | `[Basado en la tabla 5.1]` |
-| Autocrítica | `[ ]/10` | `[ ]/10` | `[Incluye la tabla 5.2]` |
-| Coherencia Lógica | `[ ]/10` | `[ ]/10` | `[Completar]` |
-| Control Emocional | `[ ]/10` | `[ ]/10` | `[Completar]` |
-| **Promedio Final** | **`[ ]/10`** | **`[ ]/10`** | **Revisado por:** `[Nombre o rol]` |
+| **Rigor Fáctico** | **8.0 / 10** | **2.5 / 10** | **Analista:** Cita resoluciones judiciales, leyes y reglamentos IFAB con precisión; se penaliza el uso de porcentajes subjetivos (AUT-002).<br>**Interlocutor A:** Repite afirmaciones falsas o anacrónicas (AUD-001, AUD-002) sin aportar documentos. |
+| **Autocrítica** | **7.5 / 10** | **1.5 / 10** | **Analista:** Admite fallas administrativas de su club (caso Negreira) y errores arbitrales a favor (ej. fuera de juego en 2006 y penal en 2009).<br>**Interlocutor A:** No reconoce ningún error factual ni arbitral de sus equipos frente a evidencia visual. |
+| **Coherencia Lógica** | **7.5 / 10** | **3.0 / 10** | **Analista:** Separa correctamente los despachos de la cancha; se penaliza proponer una apuesta económica (AUT-003).<br>**Interlocutor A:** Cambia de tema constantemente (falacia de distracción) cuando se refutan sus datos. |
+| **Control Emocional** | **6.5 / 10** | **3.0 / 10** | **Analista:** Busca la conciliación en varios tramos, pero pierde la compostura usando adjetivos descalificativos (AUT-001).<br>**Interlocutor A:** Recurre con frecuencia a burlas, sarcasmos y descalificaciones personales. |
+| **Promedio Final** | **7.4 / 10** | **2.5 / 10** | **Evaluación:** Auditoría académica basada en registros documentados. |
 
 ---
 
