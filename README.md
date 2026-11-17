@@ -1,6 +1,6 @@
 # PROYECTO ACADÉMICO: AUDITORÍA DE DATOS Y PENSAMIENTO CRÍTICO FRENTE A SESGOS COGNITIVOS EN DEBATES POLARIZADOS
 
-**Autor:** Steven Romero
+**Autor:** Steven Romero  
 **Formación:** Tecnólogo en Análisis y Desarrollo de Software (ADSO) – SENA | Analítica de Datos – UNAD (Primer Semestre)  
 **Fecha:** Noviembre de 2026  
 **Área de aplicación:** Calidad de Datos, Analítica Básica y Lógica Argumentativa  
