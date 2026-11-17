@@ -1,7 +1,7 @@
 # PROYECTO ACADÉMICO: AUDITORÍA DE DATOS Y PENSAMIENTO CRÍTICO FRENTE A SESGOS COGNITIVOS EN DEBATES POLARIZADOS
 
 **Autor:** Steven  
-**Formación:** Tecnólogo en Análisis y Desarrollo de Software (ADSO) – SENA | Analítica de Datos – UNAD  
+**Formación:** Tecnólogo en Análisis y Desarrollo de Software (ADSO) – SENA | Analítica de Datos – UNAD (Primer Semestre)  
 **Fecha:** Noviembre de 2026  
 **Área de aplicación:** Calidad de Datos, Analítica Básica y Lógica Argumentativa  
 
@@ -9,11 +9,11 @@
 
 ## 1. Resumen Ejecutivo
 
-Este proyecto propone una metodología sencilla basada en **principios de calidad de datos y análisis de información** para evaluar debates cotidianos y deportivos marcados por la polarización. 
+Este proyecto propone una metodología básica basada en **principios de calidad de datos y análisis de información** para evaluar debates cotidianos y deportivos marcados por la polarización. 
 
-Mediante la limpieza de información irrelevante, la consulta de fuentes oficiales y el uso de una tabla de verificación, se examina la validez de las afirmaciones de cada participante, **incluido el propio autor**, utilizando criterios claros, objetivos y verificables.
+Mediante la limpieza de información irrelevante (*Garbage Data*), la consulta de fuentes oficiales y el uso de una tabla de verificación con conteo de frecuencias, se examina la validez de las afirmaciones de cada participante, **incluido el propio autor**, utilizando criterios claros, objetivos y verificables.
 
-> **Nota de alcance:** Este es un ejercicio académico exploratorio. Sus resultados describen únicamente los casos revisados y no buscan generalizarse a otras personas, edades o profesiones.
+> **Nota de alcance y muestra ($N$):** Este es un estudio de caso exploratorio de carácter cualitativo-descriptivo con un tamaño de muestra $N = 1$ (un intercambio bilateral). Sus resultados describen únicamente el caso revisado y no buscan generalizarse estadísticamente a otras poblaciones.
 
 ---
 
@@ -38,9 +38,9 @@ Diseñar una guía práctica de **auditoría de datos y análisis argumentativo*
 
 ### 3.2. Objetivos Específicos
 1. Aplicar un proceso básico de **limpieza y organización de datos (ETL)** a conversaciones informales para separar hechos comprobables de opiniones.
-2. Elaborar una **matriz de verificación** que relacione cada afirmación con su respectiva fuente oficial de contraste.
-3. Evaluar la calidad de las intervenciones mediante una **rúbrica sencilla (escala de 0 a 10)** aplicada tanto al interlocutor como al propio autor.
-4. Establecer **reglas de cierre** para finalizar una discusión cuando deja de aportar datos útiles.
+2. Elaborar una **matriz de verificación** que relacione cada afirmación con su respectiva fuente oficial de contraste (*Ground Truth*).
+3. Evaluar la calidad de las intervenciones mediante una **matriz de frecuencias y niveles de desempeño** aplicada tanto al interlocutor como al propio autor, evitando asignaciones numéricas subjetivas.
+4. Establecer **reglas de cierre** (*Graceful Shutdown*) para finalizar una discusión cuando deja de aportar datos útiles.
 
 ---
 
@@ -53,7 +53,7 @@ En el desarrollo de software (ADSO), ningún sistema procesa datos sin validarlo
 3. **Validación (*Ground Truth*):** Cada dato se compara con fuentes primarias oficiales:
    * *Ámbito jurídico:* Notas oficiales del poder judicial y leyes vigentes.
    * *Ámbito deportivo:* Reglamentos oficiales (IFAB) y registros históricos verificados (FIFA).
-4. **Dictamen:** Se clasifica cada afirmación como *Verificada, Falsa, Imprecisa* o *Sesgo de selección*.
+4. **Dictamen y Conteo de Frecuencias:** Se clasifica cada afirmación (*Verificada, Falsa, Imprecisa* o *Sesgo de selección*) y se contabilizan los eventos observables para reducir la subjetividad del evaluador.
 
 ### Reglas de imparcialidad del autor
 * Aplicar exactamente los mismos criterios de evaluación a las afirmaciones propias y a las ajenas.
@@ -62,7 +62,7 @@ En el desarrollo de software (ADSO), ningún sistema procesa datos sin validarlo
 
 ---
 
-## 5. Caso de Estudio Exploratorio
+## 5. Caso de Estudio Exploratorio ($N = 1$)
 
 > **Consideración ética:** Para respetar la privacidad y evitar conflictos personales, se omiten nombres reales y datos identificables. Se analizan las intervenciones registradas entre el **Analista** (autor del proyecto) y el **Interlocutor A**.
 
@@ -77,7 +77,7 @@ En el desarrollo de software (ADSO), ningún sistema procesa datos sin validarlo
 
 ### 5.2. Registro de Errores Propios del Analista
 
-*Para mantener la objetividad, el autor registra aquí sus propias fallas detectadas durante la revisión de los registros:*
+*Para mantener la objetividad y mitigar el sesgo del observador, el autor registra aquí sus propias fallas detectadas durante la revisión de los registros:*
 
 | ID | Afirmación o Conducta Propia | Qué estuvo mal | Corrección Aplicada |
 | :--- | :--- | :--- | :--- |
@@ -87,26 +87,25 @@ En el desarrollo de software (ADSO), ningún sistema procesa datos sin validarlo
 
 ---
 
-## 6. Rúbrica de Evaluación (Escala de 0 a 10)
+## 6. Evaluación Objetiva por Frecuencia y Niveles
 
-Para medir la calidad de las intervenciones se utiliza una escala simple donde **0–3 es Bajo**, **4–6 es Medio** y **7–10 es Alto**:
+Para evitar asignar calificaciones numéricas arbitrarias a conductas humanas, se emplea una **matriz de conteo de eventos observables** acompañada de niveles cualitativos definidos (**Bajo, Medio, Alto**):
 
-| Criterio | 0–3 (Bajo) | 4–6 (Medio) | 7–10 (Alto) |
+| Criterio | Nivel Bajo | Nivel Medio | Nivel Alto |
 | :--- | :--- | :--- | :--- |
-| **Rigor Fáctico** | Afirma cosas sin fuentes ni pruebas. | Presenta algunas fuentes, pero mezcla suposiciones. | Respalda casi todas sus afirmaciones con fuentes oficiales. |
-| **Autocrítica** | No acepta errores aunque vea pruebas. | Acepta errores solo tras mucha insistencia. | Reconoce y corrige errores propios de forma abierta. |
-| **Coherencia Lógica** | Cambia de tema constantemente o se contradice. | Mantiene el tema con algunos desvíos. | Mantiene el hilo del debate sin contradicciones. |
-| **Control Emocional** | Usa insultos, burlas o ataques personales. | Tono variable con momentos de molestia. | Mantiene un trato respetuoso en todo momento. |
+| **Rigor Fáctico** | 0 fuentes oficiales citadas; predominan suposiciones. | Cita fuentes oficiales, pero incluye al menos 1 dato no verificado. | Respalda sus afirmaciones con fuentes oficiales verificables sin datos falsos. |
+| **Autocrítica** | 0 errores propios reconocidos frente a evidencia contraria. | Reconoce errores propios solo tras insistencia o revisión posterior. | Reconoce y corrige errores propios de forma abierta durante el intercambio. |
+| **Coherencia Lógica** | Presenta 2 o más cambios de tema o falacias de distracción. | Presenta 1 desviación temática o argumento no científico. | Mantiene el hilo conductor sin desviaciones lógicas. |
+| **Control Emocional** | Presenta 3 o más ataques personales, burlas o descalificaciones. | Presenta entre 1 y 2 descalificaciones o momentos de reactividad. | Mantiene un trato respetuoso y neutral en el 100% de las intervenciones. |
 
-### 6.1. Tabla de Resultados (Auditoría Aplicada)
+### 6.1. Matriz de Resultados Aplicada
 
-| Criterio | Analista | Interlocutor A | Observaciones y Evidencia |
+| Criterio | Analista (Frecuencia / Nivel) | Interlocutor A (Frecuencia / Nivel) | Evidencia Documentada en el Registro |
 | :--- | :---: | :---: | :--- |
-| **Rigor Fáctico** | **8.0 / 10** | **2.5 / 10** | **Analista:** Cita resoluciones judiciales, leyes y reglamentos IFAB con precisión; se penaliza el uso de porcentajes subjetivos (AUT-002).<br>**Interlocutor A:** Repite afirmaciones falsas o anacrónicas (AUD-001, AUD-002) sin aportar documentos. |
-| **Autocrítica** | **7.5 / 10** | **1.5 / 10** | **Analista:** Admite fallas administrativas de su club (caso Negreira) y errores arbitrales a favor (ej. fuera de juego en 2006 y penal en 2009).<br>**Interlocutor A:** No reconoce ningún error factual ni arbitral de sus equipos frente a evidencia visual. |
-| **Coherencia Lógica** | **7.5 / 10** | **3.0 / 10** | **Analista:** Separa correctamente los despachos de la cancha; se penaliza proponer una apuesta económica (AUT-003).<br>**Interlocutor A:** Cambia de tema constantemente (falacia de distracción) cuando se refutan sus datos. |
-| **Control Emocional** | **6.5 / 10** | **3.0 / 10** | **Analista:** Busca la conciliación en varios tramos, pero pierde la compostura usando adjetivos descalificativos (AUT-001).<br>**Interlocutor A:** Recurre con frecuencia a burlas, sarcasmos y descalificaciones personales. |
-| **Promedio Final** | **7.4 / 10** | **2.5 / 10** | **Evaluación:** Auditoría académica basada en registros documentados. |
+| **Rigor Fáctico** | **Nivel Medio-Alto**<br>*(4 fuentes oficiales / 1 dato subjetivo)* | **Nivel Bajo**<br>*(0 fuentes oficiales / 4 errores fácticos)* | **Analista:** Cita CGPJ, FIFA, IFAB y BOE con precisión; se penaliza el uso de porcentajes subjetivos (AUT-002).<br>**Interlocutor A:** Repite afirmaciones falsas o anacrónicas (AUD-001, AUD-002) sin aportar documentos. |
+| **Autocrítica** | **Nivel Medio-Alto**<br>*(3 errores propios documentados)* | **Nivel Bajo**<br>*(0 errores reconocidos)* | **Analista:** Admite fallas administrativas de su club y errores arbitrales a favor, además de documentar sus fallas en la Tabla 5.2.<br>**Interlocutor A:** No reconoce ningún error factual ni arbitral frente a evidencia visual. |
+| **Coherencia Lógica** | **Nivel Medio**<br>*(1 desviación lógica)* | **Nivel Bajo**<br>*(Múltiples cambios de tema)* | **Analista:** Separa correctamente los despachos de la cancha; se penaliza proponer una apuesta económica (AUT-003).<br>**Interlocutor A:** Cambia de tema constantemente (AUD-004) cuando se refutan sus datos. |
+| **Control Emocional** | **Nivel Medio**<br>*(1 episodio de reactividad)* | **Nivel Bajo**<br>*(Recurrencia constante)* | **Analista:** Busca la conciliación en varios tramos, pero pierde la compostura usando adjetivos descalificativos (AUT-001).<br>**Interlocutor A:** Recurre con frecuencia a burlas, sarcasmos y descalificaciones personales. |
 
 ---
 
@@ -120,23 +119,25 @@ Cuando una discusión deja de aportar información nueva, se aplican tres reglas
 
 ---
 
-## 8. Conclusiones
+## 8. Conclusiones y Trabajo Futuro
 
+### 8.1. Conclusiones del Estudio
 1. Los sesgos cognitivos afectan a cualquier persona; aplicar una **metodología básica de verificación de datos** ayuda a separar los hechos reales de las opiniones emocionales.
-2. Los conocimientos de **ADSO y Analítica de Datos** son útiles para organizar información cotidiana con orden y evidencia, siempre que el analista también evalúe sus propios errores.
+2. Reemplazar calificaciones numéricas arbitrarias por **conteos de frecuencias observables** reduce la subjetividad del analista al evaluar conversaciones.
 3. El propósito de auditar un debate no es "ganar" una discusión, sino **comprobar los hechos con fuentes confiables y saber retirarse a tiempo** cuando el intercambio no es productivo.
 
+### 8.2. Escalabilidad del Proyecto (Trabajo Futuro)
+Dado que este trabajo corresponde a una etapa inicial de formación (Primer Semestre) y opera sobre una muestra unitaria ($N=1$), se proyectan tres fases de evolución técnica conforme avance la formación en **ADSO y Analítica de Datos**:
+* **Fase 1 (Ampliación de Muestra):** Recolectar un conjunto de datos (*dataset*) más amplio ($N \ge 30$) a partir de hilos públicos anonimizados para identificar patrones recurrentes de desinformación.
+* **Fase 2 (Automatización ETL):** Implementar scripts básicos en **Python** para automatizar la limpieza de ruido textual (eliminación de signos, *stopwords* y detección de palabras clave).
+* **Fase 3 (Almacenamiento y Visualización):** Estructurar los registros auditados en una base de datos relacional (**SQL**) y generar tableros de control para visualizar la frecuencia de cada tipo de sesgo.
+
 ---
-
-
-<FollowUp>
-Si quieres, puedes compartir **un par de ejemplos reales** de imprecisiones que hayas tenido en esos debates para ayudarte a redactar la **Tabla 5.2 (Errores Propios)** con el mismo tono académico.
-</FollowUp>
 
 ## 9. Referencias (APA 7.ª Edición)
 
 * Boletín Oficial del Estado. (2022). *Ley 39/2022, de 30 de diciembre, del Deporte*. BOE núm. 314. https://boe.es
 * Consejo General del Poder Judicial. (2024, 24 de mayo). *La Audiencia de Barcelona desestima el delito de cohecho en el caso Negreira* [Nota de prensa]. Poder Judicial de España. https://poderjudicial.es
 * Fédération Internationale de Football Association. (2026, 19 de julio). *Spain crowned FIFA World Cup 2026 champions in New York New Jersey*. https://fifa.com
-* International Football Association Board. (2026). Laws of the Game 2026/27. theifab.com
-* Kahneman, D. (2011). Thinking, Fast and Slow. Farrar, Straus and Giroux.
+* International Football Association Board. (2026). *Laws of the Game 2026/27*. https://theifab.com
+* Kahneman, D. (2011). *Thinking, Fast and Slow*. Farrar, Straus and Giroux.
