@@ -138,3 +138,5 @@ Si quieres, puedes compartir **un par de ejemplos reales** de imprecisiones que 
 * Boletín Oficial del Estado. (2022). *Ley 39/2022, de 30 de diciembre, del Deporte*. BOE núm. 314. https://boe.es
 * Consejo General del Poder Judicial. (2024, 24 de mayo). *La Audiencia de Barcelona desestima el delito de cohecho en el caso Negreira* [Nota de prensa]. Poder Judicial de España. https://poderjudicial.es
 * Fédération Internationale de Football Association. (2026, 19 de julio). *Spain crowned FIFA World Cup 2026 champions in New York New Jersey*. https://fifa.com
+* International Football Association Board. (2026). Laws of the Game 2026/27. theifab.com
+* Kahneman, D. (2011). Thinking, Fast and Slow. Farrar, Straus and Giroux.
